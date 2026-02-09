@@ -1,0 +1,37 @@
+#spring.application.name=ecom_application
+#spring.h2.console.enabled=true
+#spring.datasource.url=jdbc:h2:mem:test
+#management.endpoints.web.exposure.include=*
+#endpoint.health.show-details=always
+spring:
+  application:
+    name: "ecom_application"
+
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: "jdbc:h2:mem:test"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+server:
+  shutdown: graceful
+
+info:
+  app:
+    name: MyNewApp
+    description: App built by us
+    version: 1.0.0
